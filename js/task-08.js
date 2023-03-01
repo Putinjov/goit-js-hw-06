@@ -5,13 +5,13 @@ form.addEventListener('submit', (event) => {
     const {
         elements: { email, password },
     } = event.currentTarget;
+    if (email.value === '' || password.value === '') {
+        return alert('Всі поля повинні бути заповнені!');
+    }
     const inputValue = {
         email: `${ email.value }`,
         password: `${password.value}`,
     }
     console.log(inputValue);
-    if (email.value === '' || password.value === '') {
-        window.alert('Всі поля повинні бути заповнені!');
-    }
     event.target.reset;
 })

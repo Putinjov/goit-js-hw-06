@@ -3,8 +3,9 @@ const refs = {
   span: document.querySelector('.color'),
 };
 refs.btnChangeColor.addEventListener('click', () => {
-  document.body.style.backgroundColor = getRandomHexColor();
-  refs.span.textContent = getRandomHexColor()
+  const colorName = getRandomHexColor();
+  document.body.style.backgroundColor = colorName;
+  refs.span.textContent = colorName;
 });
 
 function getRandomHexColor() {
